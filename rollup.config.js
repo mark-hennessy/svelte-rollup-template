@@ -10,6 +10,7 @@ import { terser } from 'rollup-plugin-terser';
 const isProduction = !process.env.ROLLUP_WATCH;
 
 const rootDir = path.resolve(__dirname);
+const srcDir = path.resolve(rootDir, 'src');
 
 function serve() {
   let server;
@@ -46,7 +47,7 @@ export default {
   },
   plugins: [
     alias({
-      entries: [{ find: '~', replacement: path.resolve(rootDir, 'src') }],
+      entries: [{ find: '~', replacement: srcDir }],
     }),
 
     // If you have external dependencies installed from
@@ -55,7 +56,7 @@ export default {
     // consult the documentation for details:
     // https://github.com/rollup/plugins/tree/master/packages/commonjs
     resolve({
-      extensions: ['.svelte', '.js'],
+      extensions: ['.js'],
       browser: true,
       dedupe: ['svelte'],
     }),
