@@ -1,3 +1,5 @@
 export const sayHi = () => {
-  console.log('Hi');
+  const data = null;
+  // console.log('Hi');
+  console.log('Hi', data?.name);
 };

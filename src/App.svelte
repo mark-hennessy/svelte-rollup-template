@@ -1,4 +1,5 @@
 <script>
+  // import 'carbon-components-svelte/css/all.css';
   import Entry from './components/Entry.svelte';
 
   export let name;
@@ -14,6 +15,10 @@
 </main>
 
 <style>
+  :global {
+    /*@import 'node_modules/carbon-components-svelte/css/all';*/
+  }
+
   main {
     text-align: center;
     padding: 1em;
