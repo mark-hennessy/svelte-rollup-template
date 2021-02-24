@@ -1,8 +1,8 @@
-<script>
-  // import 'carbon-components-svelte/css/all.css';
+<script lang="ts">
+  import 'carbon-components-svelte/css/all.css';
   import Entry from './components/Entry.svelte';
 
-  export let name;
+  export let name: string;
 </script>
 
 <main>
@@ -14,11 +14,7 @@
   <Entry />
 </main>
 
-<style>
-  :global {
-    /*@import 'node_modules/carbon-components-svelte/css/all';*/
-  }
-
+<style lang="scss">
   main {
     text-align: center;
     padding: 1em;
