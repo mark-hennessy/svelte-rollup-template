@@ -7,22 +7,7 @@ module.exports = {
   // https://github.com/sveltejs/svelte-preprocess/blob/main/docs/getting-started.md
   preprocess: sveltePreprocess({
     sourceMap: !production,
-    babel: {
-      presets: [
-        [
-          '@babel/preset-env',
-          {
-            loose: true,
-            // No need for babel to resolve modules
-            modules: false,
-            targets: {
-              // Target es6+
-              esmodules: true,
-            },
-          },
-        ],
-      ],
-    },
+    babel: require('./babel.config'),
     scss: {
       prependData: `@import 'src/styles/variables.scss';`,
     },
