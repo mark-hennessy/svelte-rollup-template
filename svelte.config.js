@@ -8,7 +8,6 @@ module.exports = {
   preprocess: sveltePreprocess({
     sourceMap: !production,
     defaults: {
-      script: 'typescript',
       style: 'scss',
     },
     scss: {

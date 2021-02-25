@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
   import { Accordion, AccordionItem } from 'carbon-components-svelte';
   import { sayHi } from '~/utils/stringUtils';
 

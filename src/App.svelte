@@ -1,8 +1,8 @@
-<script lang="ts">
+<script>
   import 'carbon-components-svelte/css/all.css';
   import Entry from './components/Entry.svelte';
 
-  export let name: string;
+  export let name;
 </script>
 
 <main>

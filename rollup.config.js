@@ -1,7 +1,6 @@
 import alias from '@rollup/plugin-alias';
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
-import typescript from '@rollup/plugin-typescript';
 import path from 'path';
 import css from 'rollup-plugin-css-only';
 import livereload from 'rollup-plugin-livereload';
@@ -39,7 +38,7 @@ function serve() {
 }
 
 export default {
-  input: 'src/main.ts',
+  input: 'src/main.js',
   output: {
     sourcemap: true,
     format: 'iife',
@@ -55,17 +54,12 @@ export default {
     // consult the documentation for details:
     // https://github.com/rollup/plugins/tree/master/packages/commonjs
     resolve({
-      extensions: ['.js', '.ts'],
+      extensions: ['.js'],
       browser: true,
       dedupe: ['svelte'],
     }),
 
     commonjs(),
-
-    typescript({
-      sourceMap: !production,
-      inlineSources: !production,
-    }),
 
     alias({
       entries: [{ find: '~', replacement: srcDir }],
