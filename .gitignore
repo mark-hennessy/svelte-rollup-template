@@ -2,7 +2,10 @@
 /public/build/
 
 .DS_Store
-package-lock.json
+
+npm-debug.log
+yarn.lock
+yarn-debug.log
 yarn-error.log
 
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
