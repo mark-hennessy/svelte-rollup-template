@@ -1,11 +1,11 @@
-import alias from '@rollup/plugin-alias';
-import commonjs from '@rollup/plugin-commonjs';
-import resolve from '@rollup/plugin-node-resolve';
-import path from 'path';
-import css from 'rollup-plugin-css-only';
-import livereload from 'rollup-plugin-livereload';
-import svelte from 'rollup-plugin-svelte';
-import { terser } from 'rollup-plugin-terser';
+const alias = require('@rollup/plugin-alias');
+const commonjs = require('@rollup/plugin-commonjs');
+const { nodeResolve } = require('@rollup/plugin-node-resolve');
+const path = require('path');
+const css = require('rollup-plugin-css-only');
+const livereload = require('rollup-plugin-livereload');
+const svelte = require('rollup-plugin-svelte');
+const { terser } = require('rollup-plugin-terser');
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -37,7 +37,7 @@ function serve() {
   };
 }
 
-export default {
+module.exports = {
   input: 'src/main.js',
   output: {
     sourcemap: true,
@@ -46,14 +46,14 @@ export default {
     file: 'public/build/bundle.js',
   },
   plugins: [
-    svelte(require('./svelte.config')),
+    svelte(require('./svelte.config.cjs')),
 
     // If you have external dependencies installed from
     // npm, you'll most likely need these plugins. In
     // some cases you'll need additional configuration -
     // consult the documentation for details:
     // https://github.com/rollup/plugins/tree/master/packages/commonjs
-    resolve({
+    nodeResolve({
       extensions: ['.js'],
       browser: true,
       dedupe: ['svelte'],

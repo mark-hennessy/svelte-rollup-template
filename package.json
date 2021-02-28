@@ -51,5 +51,6 @@
   "dependencies": {
     "sirv-cli": "^1.0.0"
   },
+  "type": "module",
   "license": "MIT"
 }
