@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/svelte-rollup-template.iml" filepath="$PROJECT_DIR$/.idea/svelte-rollup-template.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/svelte-template-v1.iml" filepath="$PROJECT_DIR$/.idea/svelte-template-v1.iml" />
     </modules>
   </component>
 </project>
